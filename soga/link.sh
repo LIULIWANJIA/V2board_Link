@@ -3,7 +3,7 @@ echo "进入配置文件目录并删除默认配置文件"
 cd /etc/soga
 rm -f -r -v soga.conf
 echo "下载配置云端文件"
-wget https://liuliwanjia.top/bash/A-Files/v2board/syyum/config/soga.conf
+wget https://raw.githubusercontent.com/LIULIWANJIA/V2board_Link/master/soga/webapi/soga.conf
 echo "下载完成请输入详细配置项"
 echo " "
 echo "____________开始配置____________(输入完成后单击回车)"
