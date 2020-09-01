@@ -33,3 +33,18 @@ ________________________________________________________________________________
 cd /root && rm -f -r -v linkdb.sh && wget https://raw.githubusercontent.com/LIULIWANJIA/V2board_Link/master/soga/linkdb.sh && chmod +x linkdb.sh && bash linkdb.sh
 
 __________________________________________________________________________________________
+-
+-
+定制脚本
+-
+tg用户名:maimai_a
+-
+-
+简化脚本需要人工输入的项目
+方便快速对接
+
+-
+-
+-
+-
+
