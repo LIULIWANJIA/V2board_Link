@@ -13,13 +13,23 @@ echo " "
   echo "________________________开始配置<Mysql_DB>________________(输入完成后单击回车)"
 echo " "
   sleep 2
-  read -p "输入数据库host地址:" mysql_host 
+  read -p "数据库host地址:" mysql_host 
   echo "数据库host = $mysql_host"
   echo " "
-  read -p "输入数据库端口(回车默认3306):" mysql_db_port 
+  read -p "数据库端口(回车默认3306):" mysql_db_port 
+  [ -z "${mysql_db_port}" ] && mysql_db_port=3306
   echo "mysql_port = $mysql_db_port"
   echo " "
-  read -p "输入V2Ray节点ID:" v2board_node_id 
+  read -p "数据库库名:" mysql_db_name
+  echo "db_name = $mysql_db_name"
+  echo " "
+  read -p "数据库用户名:" mysql_db_user
+  echo "db_user = $mysql_db_user"
+  echo " "
+  read -p "数据库密码:" mysql_db_password
+  echo "db_password = $mysql_db_password"
+  echo " "
+  read -p "V2Ray节点ID:" v2board_node_id 
   [ -z "${v2board_node_id}" ] && v2board_node_id=0
   echo "NodeID = $v2board_node_id"
   echo " "
@@ -44,11 +54,20 @@ echo " "
 cd /root/soga && chmod +x soga.conf
 echo "Writing soga.conf_______________________________________________ing"
 echo " "
-echo "写入config-webapi_url-面板URL"
-  sed -i "s|webapi_url=.*|webapi_url=${v2board_url}|"  /etc/soga/soga.conf
+echo "写入config-db_host-数据库Host"
+  sed -i "s|db_host=.*|db_host=${mysql_host}|"  /etc/soga/soga.conf
   
-echo "写入config-webapi_mukey-面板WebApi_Key"
-  sed -i "s|webapi_mukey=.*|webapi_mukey=${v2board_api_key}|"  /etc/soga/soga.conf
+echo "写入config-webapi_mukey-数据库端口"
+  sed -i "s|db_port=.*|db_port=${mysql_db_port}|"  /etc/soga/soga.conf
+  
+echo "写入config-db_name-数据库库名"
+  sed -i "s|db_name=.*|db_name=${mysql_db_name}|"  /etc/soga/soga.conf
+  
+echo "写入config-db_name-数据库用户名"
+  sed -i "s|db_user=.*|db_user=${mysql_db_user}|"  /etc/soga/soga.conf
+  
+echo "写入config-db_name-数据库密码"
+  sed -i "s|db_password=.*|db_password=${mysql_db_password}|"  /etc/soga/soga.conf
   
 echo "写入config-node_id-节点ID"
   sed -i "s|node_id=.*|node_id=${v2board_node_id}|"  /etc/soga/soga.conf
