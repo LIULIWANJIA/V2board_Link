@@ -8,6 +8,12 @@ echo "下载完成请输入详细配置项"
 echo " "
 echo "____________开始配置<WebApi>____(输入完成后单击回车)"
 echo " "
+read -p "输入V2Board面板URL(http://xxx.xxx.xxx/注意http和末尾斜杠):" v2board_url 
+echo "URL = $v2board_url"
+echo " "
+read -p "输入V2Board面板WebApi_Key:" v2board_api_key 
+echo "WebApi_Key = $v2board_api_key"
+echo " "
 read -p "输入V2Ray节点ID:" v2board_node_id 
 echo "NodeID = $v2board_node_id"
 echo " "
@@ -17,6 +23,11 @@ echo " "
 cd /root/soga
 chmod +x soga.conf
 echo "Writing soga.conf"
+echo "写入config-webapi_url"
+sed -i "s|webapi_url=.*|webapi_url=${v2board_url}|"  /etc/soga/soga.conf
+echo "写入config-webapi_mukey"
+sed -i "s|webapi_mukey=.*|node_id=${v2board_api_key}|"  /etc/soga/soga.conf
+echo "写入config-node_id"
 sed -i "s|node_id=.*|node_id=${v2board_node_id}|"  /etc/soga/soga.conf
 #写入完成
 echo "写入新配置完成"
