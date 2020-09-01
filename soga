@@ -1,8 +1,0 @@
-#!/bin/bash
-echo "进入soga目录"
-cd /etc/soga
-sleep 3s
-echo "删除默认配置文件"
-sleep 3s
-
-
