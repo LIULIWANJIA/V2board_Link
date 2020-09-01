@@ -9,7 +9,9 @@ jio本说明
 
 bash <(curl -Ls https://raw.githubusercontent.com/sprov065/soga/master/install.sh)
 
-
+-
+-
+-
 
 下方，一键配置soga.conf
 
