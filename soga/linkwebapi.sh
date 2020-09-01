@@ -23,10 +23,10 @@ echo " "
   [ -z "${v2board_node_id}" ] && v2board_node_id=0
   echo "NodeID = $v2board_node_id"
   echo " "
-  read -p "SSL证书目录:" v2board_cert_file
+  read -p "SSL证书目录(没有配置SSL请直接回车):" v2board_cert_file
   echo "cert_file = $v2board_cert_file"
   echo " "
-  read -p "SSL密匙目录:" v2board_key_file
+  read -p "SSL密匙目录(没有配置SSL请直接回车):" v2board_key_file
   echo "key_file = $v2board_key_file"
   echo " "
   read -p "soga付费密匙(没有请直接回车):" soga_key 
@@ -54,10 +54,10 @@ echo "写入config-node_id-节点ID"
   sed -i "s|node_id=.*|node_id=${v2board_node_id}|"  /etc/soga/soga.conf
   
 echo "写入config-cert_file-SSL证书目录"
-  sed -i "s|node_id=.*|node_id=${v2board_cert_file}|"  /etc/soga/soga.conf
+  sed -i "s|cert_file=.*|cert_file=${v2board_cert_file}|"  /etc/soga/soga.conf
   
 echo "写入config-key_file-SSL密匙目录"
-  sed -i "s|node_id=.*|node_id=${v2board_key_file}|"  /etc/soga/soga.conf
+  sed -i "s|key_file=.*|key_file=${v2board_key_file}|"  /etc/soga/soga.conf
   
 echo "写入config-soga_key-soga付费密匙"
   sed -i "s|soga_key=.*|soga_key=${soga_key}|"  /etc/soga/soga.conf
