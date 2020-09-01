@@ -6,7 +6,7 @@ echo "下载配置云端文件"
 wget https://raw.githubusercontent.com/LIULIWANJIA/V2board_Link/master/soga/webapi/soga.conf
 echo "下载完成请输入详细配置项"
 echo " "
-echo "____________开始配置____________(输入完成后单击回车)"
+echo "____________开始配置<WebApi>____(输入完成后单击回车)"
 echo " "
 read -p "输入V2Ray节点ID:" v2board_node_id 
 echo "NodeID = $v2board_node_id"
