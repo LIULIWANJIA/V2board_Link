@@ -6,6 +6,7 @@ jio本说明
 这个脚本可以帮助你一键配置soga.conf
 使用前请安装好SOGA后端
 (soga后端安装脚本)
+
 bash <(curl -Ls https://raw.githubusercontent.com/sprov065/soga/master/install.sh)
 
 
