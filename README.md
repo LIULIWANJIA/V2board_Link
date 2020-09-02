@@ -13,7 +13,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/sprov065/soga/master/install.s
 -
 -
 
-下方，一键配置soga.conf脚本
+下方，一键配置soga.conf脚本(V2Board)
 -
 WebApi对接脚本(复制整个一大串，到ssh执行就行)
 -
@@ -31,6 +31,29 @@ DB数据库对接脚本(复制整个一大串，到ssh执行就行)
 __________________________________________________________________________________________
 
 cd /root && rm -f -r -v linkdb.sh && wget https://raw.githubusercontent.com/LIULIWANJIA/V2board_Link/master/soga/linkdb.sh && chmod +x linkdb.sh && bash linkdb.sh
+
+__________________________________________________________________________________________
+-
+-
+-
+下方，一键配置soga.conf脚本(SSPanel-没用过，出现问题请TG联系)
+-
+WebApi对接脚本(复制整个一大串，到ssh执行就行)
+-
+__________________________________________________________________________________________
+
+cd /root && rm -f -r -v linkwebapi.sh && wget https://raw.githubusercontent.com/LIULIWANJIA/V2board_Link/master/sspanel/linkwebapi.sh && chmod +x linkwebapi.sh && bash linkwebapi.sh
+
+__________________________________________________________________________________________
+
+
+
+
+DB数据库对接脚本(复制整个一大串，到ssh执行就行)
+-
+__________________________________________________________________________________________
+
+cd /root && rm -f -r -v linkdb.sh && wget https://raw.githubusercontent.com/LIULIWANJIA/V2board_Link/master/sspanel/linkdb.sh && chmod +x linkdb.sh && bash linkdb.sh
 
 __________________________________________________________________________________________
 -
