@@ -1,6 +1,8 @@
 # V2board_Link
 
+
 (不更新了不更新了，原来soga是有一键docker脚本的，我这多余了呀)
+
 jio本说明
 在安装SOGA后你是否因为要手动修改soga.conf而烦恼
 
