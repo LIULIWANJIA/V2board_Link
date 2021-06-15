@@ -1,5 +1,7 @@
 # V2board_Link
 
+本脚本年久失修加上SOGA后端自有docker一键对接
+因此，仓库废弃
 
 (不更新了不更新了，原来soga是有一键docker脚本的，我这多余了呀)
 
